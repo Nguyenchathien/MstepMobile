@@ -426,12 +426,12 @@
 			$('.menu-toggle-site').on('touchend', function(event) {
 				switch(openMe){
 					case false:
-						$('#schedule-wraper').css('margin-left', '0');
+						$('#schedule-date-left').css('left', '0');
 						$(this).addClass('open-toggle');
 						openMe = true;
 						break;
 					case true:
-						$('#schedule-wraper').css('margin-left', '-500px');
+						$('#schedule-date-left').css('left', '-500px');
 						$(this).removeClass('open-toggle');
 						openMe = false;
 						break;
@@ -497,14 +497,14 @@
 				$(this).addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
-				$('#schedule-wraper').css('margin-left', '-500px');
+				$('#schedule-date-left').css('left', '-500px');
 			});
 			$('.tab-site-content ul.list-schedule li').on('touchend', function(event) {
 				$('.tab-site-content ul.list-schedule li').removeClass('active');
 				$(this).addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
-				$('#schedule-wraper').css('margin-left', '-500px');
+				$('#schedule-date-left').css('left', '-500px');
 			});
 		}
 		scrollDateSite();
