@@ -1747,9 +1747,12 @@ body.mobi-layout #schedule-date-left div.modal-body{
 #schedule-date-left div.modal-body ul .prev-step{
 	font-size: 45px;
     border: 1px solid #999;
-    padding: 0 19px 5px 15px;
-    border-radius: 8px;
+    padding: 0 20px 6px 16px;
+    border-radius: 50%;
     margin-left: 20px;
+    background-color: #dcf0fb;
+    color: #666;
+    cursor: pointer;
 }
 #schedule-date-left div.modal-body ul::-webkit-scrollbar,
 .worker-block ul.list-worker::-webkit-scrollbar {
