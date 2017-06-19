@@ -1700,8 +1700,8 @@ ul#list-car li {
     position: relative;
 }
 body.mobi-layout #schedule-wraper{
-	width: calc(100% + 230px);
-	margin-left: -230px;
+	width: calc(100% + 500px);
+	margin-left: -500px;
 	transition: .5s;
 }
 #schedule-worker-right {
@@ -1710,6 +1710,9 @@ body.mobi-layout #schedule-wraper{
     background-color: #dcf0fb;
     float: right;
     display: inline-table;
+}
+body.mobi-layout #schedule-worker-right {
+    width: calc(100% - 500px);
 }
 #schedule-worker-right button.close{
     position:absolute;
@@ -2084,7 +2087,7 @@ button#worker-close {
 body.mobi-layout #schedule-wraper #schedule-date-left ul.list-date-btn li.date-add{padding-left:50px}
 body.mobi-layout #schedule-worker-right .modal-body .modal-left-block{width:100%;float:none;}
 body.mobi-layout #schedule-worker-right .modal-body .modal-right-block{width:100%;float:none;padding-left:0;margin-top:30px;}
-body.mobi-layout #schedule-wraper #schedule-date-left{min-height:830px}
+body.mobi-layout #schedule-wraper #schedule-date-left{min-height:830px;width:500px}
 body.mobi-layout #schedule-date-left .modal-header h4,
 body.mobi-layout #schedule-worker-right .modal-body .modal-header h4,
 body.mobi-layout #schedule-wraper #schedule-date-left ul.list-date-btn li.date-add{font-size:32px}

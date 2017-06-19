@@ -2297,7 +2297,7 @@ p.upload-error {
 	transition: .5s;
 }
 .menu-toggle-site.open-toggle{
-	left: 240px;
+	left: 510px;
 }
 .menu-toggle-site.open-toggle div span.me-bar:first-child{
 	position: absolute;
