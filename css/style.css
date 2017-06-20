@@ -1801,8 +1801,8 @@ body.mobi-layout #schedule-date-left div.modal-body{
 	display: inline-block;
 	text-align: center;
 	border:  1px solid #ccc;
-	padding: 5px 0;
-	font-size: 28px;
+	padding: 10px 0;
+	font-size: 34px;
 }
 #schedule-date-left .modal-header .tab-date-site span.active{
 	background-color: #dcf0fb;
