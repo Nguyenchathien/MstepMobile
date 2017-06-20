@@ -1467,7 +1467,7 @@ ul.list-worker {
 }
 ul.list-worker li {
     list-style: none;
-    display: inline;
+    display: -webkit-inline-box;
     float: left;
     margin-right: 10px;
     margin-bottom: 5px;
@@ -1667,7 +1667,7 @@ ul#list-car li {
 #schedule-wraper #schedule-date-left {
     display: block;
     width: 230px;
-    height: 100%;
+    height: 50%;
     float: left;
     min-height: 540px
 }
@@ -1710,8 +1710,25 @@ body.mobi-layout #schedule-wraper{
     float: right;
     display: inline-table;
 }
+body.mobi-layout #schedule-wraper #schedule-date-left{
+    min-height:830px;
+    width:250px;
+    background: #fff;
+    transition: .5s;
+    float: left;
+}
 body.mobi-layout #schedule-worker-right {
-    width: 100%;
+    width: calc(100% - 250px);
+    float: right;
+}
+body.mobi-layout #schedule-wraper.active{
+    width: 200%;
+}
+body.mobi-layout #schedule-wraper.active #schedule-date-left{
+    width: 50%;
+}
+body.mobi-layout #schedule-wraper.active #schedule-worker-right{
+    width: 50%;
 }
 #schedule-worker-right button.close{
     position:absolute;
@@ -2092,24 +2109,20 @@ button#worker-close {
 body.mobi-layout #schedule-wraper #schedule-date-left ul.list-date-btn li.date-add{padding-left:50px}
 body.mobi-layout #schedule-worker-right .modal-body .modal-left-block{width:100%;float:none;}
 body.mobi-layout #schedule-worker-right .modal-body .modal-right-block{width:100%;float:none;padding-left:0;margin-top:30px;}
-body.mobi-layout #schedule-wraper #schedule-date-left{
-    min-height:830px;
-    width:500px;
-    position: absolute;
-    left: -500px;
-    top: 0;
-    background: #fff;
-    z-index: 9;
-    transition: left .5s;
-}
 body.mobi-layout #schedule-date-left .modal-header h4,
 body.mobi-layout #schedule-worker-right .modal-body .modal-header h4,
-body.mobi-layout #schedule-wraper #schedule-date-left ul.list-date-btn li.date-add{font-size:32px}
+body.mobi-layout #schedule-wraper #schedule-date-left ul.list-date-btn li.date-add,
 body.mobi-layout #schedule-worker-right div.modal-body div.modal-left-block div.worker-block span,
 body.mobi-layout #schedule-site-info-container div.modal-body label,
 body.mobi-layout ul.list-worker li,
 body.mobi-layout ul#list-car li,
-body.mobi-layout #schedule-worker-right div.modal-body div.modal-right-block div.note-block div div p{font-size:33px}
+body.mobi-layout #schedule-worker-right div.modal-body div.modal-right-block div.note-block div div p{
+    font-size:32px;
+    display: -webkit-inline-box;
+}
+body.mobi-layout span.form-control{
+    display: none!important;
+}
 body.mobi-layout ul#list-level li{width:50px;height:50px}
 body.mobi-layout #schedule-site-info-container{position:absolute;top:0;right:0;bottom:0;left:0;width:calc(100% - 200px);max-height:calc(100% - 100px)!important;margin-top:50px!important;margin-bottom:50px!important}
 body.mobi-layout #dataworker{height:60px;font-size:32px!important}

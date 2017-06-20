@@ -2279,7 +2279,7 @@ p.upload-error {
 	top: 20px;
 }
 .tab-date-content{
-	transition: .5s;
+	transition: .2s;
 	width: 300%;
 }
 .tab-site-content{
@@ -2313,14 +2313,14 @@ p.upload-error {
 	display: none;
 }
 .menu-toggle-site div{
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 }
 .menu-toggle-site div span.me-bar{
 	width: 70%;
     height: 3px;
     background-color: #555;
-    margin: 9px 15%;
+    margin: 15px 15%;
     display: block;
     transition: 1s;
 }
