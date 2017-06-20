@@ -1767,7 +1767,7 @@ body.mobi-layout #schedule-date-left div.modal-body{
     color: #bee4f9;
     cursor: pointer;
     position: absolute;
-    top: 35%;
+    top: 25%;
     z-index: 99;
 }
 #schedule-date-left div.modal-body ul::-webkit-scrollbar,
@@ -2120,8 +2120,14 @@ body.mobi-layout #schedule-worker-right div.modal-body div.modal-right-block div
     display: -webkit-inline-box;
 }
 body.mobi-layout div.ui-checkbox{
-    display: flex;
     margin-left: 10px;
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:row;
 }
 body.mobi-layout span.form-control{
     display: none!important;
