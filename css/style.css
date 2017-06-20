@@ -1790,6 +1790,9 @@ body.mobi-layout #schedule-date-left div.modal-body{
     margin-bottom: 12px;
     border: none;
 }
+#schedule-date-left .modal-header h4{
+    padding: 10px 20px;
+}
 #schedule-date-left .modal-header .tab-date-site{
 	width: 100%;
 	margin: 10px 0;
@@ -2155,7 +2158,7 @@ body.mobi-layout #schedule-site-modal-inner div.modal-body form textarea{height:
 body.mobi-layout #schedule-site-modal-inner .register-btn{font-size:30px;padding:10px 20px;}
 body.mobi-layout .field-item input.datepicker{width:calc(50% - 70px)}
 body.mobi-layout .registed-workers-block{font-size:33px}
-body.mobi-layout #schedule-worker-right button.close{top:20px;font-size:50px;z-index:99}
+body.mobi-layout #schedule-worker-right button.close{top:35px;font-size:50px;z-index:99}
 body.mobi-layout #ui-datepicker-div{position:absolute!important;}
 body.mobi-layout div.ui-datepicker{font-size:33px;}
 body.mobi-layout #schedule-site-modal-inner div.ui-datepicker span{font-size:33px}
@@ -2206,7 +2209,7 @@ body.mobi-layout #inquiry_conf .inquiry_head .inquiry_head_left,
 body.mobi-layout #inquiry_conf .inquiry_head .inquiry_head_right,
 body.mobi-layout #inquiry_conf .inquiry_btns .inquiry_head_left_btn,
 body.mobi-layout #inquiry_conf .inquiry_btns .inquiry_head_right_btn{padding:33px 0;}
-body.mobi-layout #schedule-worker-right .modal-body .modal-header{display:inline-block;width:100%;margin-top:30px}
+body.mobi-layout #schedule-worker-right .modal-body .modal-header{display:inline-block;width:100%;margin-top:10px}
 
 body.mobi-layout .ui-widget-header a.ui-datepicker-next{background: url("../img/module/chevron-sign-to-right.png") no-repeat center; height: 100%}
 body.mobi-layout .ui-widget-header a.ui-datepicker-prev{background: url("../img/module/chevron-sign-left.png") no-repeat center; height: 100%}
