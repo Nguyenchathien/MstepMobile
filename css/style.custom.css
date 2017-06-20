@@ -2262,8 +2262,8 @@ p.upload-error {
 }
 .list-site-info li{
 	font-size: 30px;
-	margin: 15px 0;
-	padding: 7px 0px 7px 80px;
+	margin: 0;
+	padding: 14px 0px 14px 80px;
 	position: relative;
 }
 .list-site-info li.active{
@@ -2276,7 +2276,7 @@ p.upload-error {
 	background-color: #000;
 	position: absolute;
 	left: 50px;
-	top: 20px;
+	top: 26px;
 }
 .tab-date-content{
 	transition: .2s;

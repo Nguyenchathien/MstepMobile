@@ -1703,6 +1703,9 @@ body.mobi-layout #schedule-wraper{
 	width: 100%;
 	transition: .5s;
 }
+body.mobi-layout #schedule-wraper .ui-loader-default{
+    display: none;
+}
 #schedule-worker-right {
     width: calc(100% - 230px);
     height: 100%;
@@ -2121,13 +2124,11 @@ body.mobi-layout #schedule-worker-right div.modal-body div.modal-right-block div
 }
 body.mobi-layout div.ui-checkbox{
     margin-left: 10px;
-    display:-webkit-flex;
-    display:-webkit-box;
-    display:-moz-flex;
-    display:-moz-box;
-    display:-ms-flexbox;
-    display:flex;
-    flex-direction:row;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;  
 }
 body.mobi-layout span.form-control{
     display: none!important;
