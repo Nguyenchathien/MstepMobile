@@ -1762,14 +1762,13 @@ body.mobi-layout #schedule-date-left div.modal-body{
     -webkit-overflow-scrolling: touch;
 }
 #schedule-date-left div.modal-body ul .prev-step{
-	font-size: 45px;
-    border: 1px solid #999;
-    padding: 0 20px 6px 16px;
-    border-radius: 50%;
+	font-size: 110px;
     margin-left: 20px;
-    background-color: #dcf0fb;
-    color: #666;
+    color: #bee4f9;
     cursor: pointer;
+    position: absolute;
+    top: 35%;
+    z-index: 99;
 }
 #schedule-date-left div.modal-body ul::-webkit-scrollbar,
 .worker-block ul.list-worker::-webkit-scrollbar {
@@ -2119,6 +2118,10 @@ body.mobi-layout ul#list-car li,
 body.mobi-layout #schedule-worker-right div.modal-body div.modal-right-block div.note-block div div p{
     font-size:32px;
     display: -webkit-inline-box;
+}
+body.mobi-layout div.ui-checkbox{
+    display: flex;
+    margin-left: 10px;
 }
 body.mobi-layout span.form-control{
     display: none!important;

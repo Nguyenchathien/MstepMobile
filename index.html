@@ -522,6 +522,23 @@
 		$("#schedule-worker-right").on("swiperight", function(){
 			$('#schedule-wraper').addClass('active').css('margin-left', '0');
 		});
+		$('.tab-date-content').on("swiperight", function(){
+			if($('#schedule-wraper').hasClass('active')){
+				switch(true){
+					case $('.list-site-info').width() >= Math.abs(parseInt($('.tab-date-content').css('margin-left'))):
+						$('.tab-date-content').css('margin-left', '0');
+						break;
+					case $('.list-site-info').width() < Math.abs(parseInt($('.tab-date-content').css('margin-left'))):
+						$('.tab-date-content').css('margin-left', '-100%');
+						break;
+				}
+			}
+		});
+		$('.tab-site-content').on("swiperight", function(){
+			if($('#schedule-wraper').hasClass('active')){
+				$('.tab-site-content').css('margin-left', '0');
+			}
+		});
 	});
 </script>
 
