@@ -428,7 +428,7 @@
 
 		var openMe = false;
 		function toggleMenu(){
-			$('.menu-toggle-site').on('touchend', function(event) {
+			$('.menu-toggle-site').on('tap', function(event) {
 				switch(openMe){
 					case false:
 						$('#schedule-date-left').css('left', '0');
@@ -446,7 +446,7 @@
 		toggleMenu();
 
 		function changeTabDateSite(){
-			$('.tab-date-site').find('span').on('touchend', function(event) {
+			$('.tab-date-site').find('span').on('tap', function(event) {
 				var __tab = $(this).attr('data-tab');
 				switch(__tab){
 					case "tab-date":
@@ -466,18 +466,18 @@
 
 		var scrollStep = 0;
 		function scrollDateSite(){
-			$('ul.list-date').find('li span').on('touchend', function(event) {
+			$('ul.list-date').find('li span').on('tap', function(event) {
 				$('ul.list-date li').removeClass('active');
 				$(this).addClass('active');
 				$('.tab-date-content').css('margin-left', "-100%");
 				$('#schedule-wraper').addClass('active');
 			});
-			$('.tab-date-content ul.list-site li span').on('touchend', function(event) {
+			$('.tab-date-content ul.list-site li span').on('tap', function(event) {
 				$('.tab-date-content').css('margin-left', "-200%");
 				$('.tab-date-content ul.list-site li').removeClass('active');
 				$(this).addClass('active');
 			});
-			$('.tab-date-content span.prev-step').on('touchend', function(event) {
+			$('.tab-date-content span.prev-step').on('tap', function(event) {
 				var data_scr = $(this).attr('data-scroll');
 				switch(data_scr){
 					case "0":
@@ -489,24 +489,24 @@
 				}
 			});
 
-			$('.tab-site-content ul.list-site li span').on('touchend', function(event) {
+			$('.tab-site-content ul.list-site li span').on('tap', function(event) {
 				$('.tab-site-content ul.list-site li').removeClass('active');
 				$(this).addClass('active');
 				$('.tab-site-content').css('margin-left', "-100%");
 				$('#schedule-wraper').addClass('active');
 			});
-			$('.tab-site-content span.prev-step').on('touchend', function(event) {
+			$('.tab-site-content span.prev-step').on('tap', function(event) {
 				$('.tab-site-content').css('margin-left', "0");
 			});
 
-			$('.tab-date-content ul.list-schedule li span').on('touchend', function(event) {
+			$('.tab-date-content ul.list-schedule li span').on('tap', function(event) {
 				$('.tab-date-content ul.list-schedule li').removeClass('active');
 				$(this).addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
 				$('#schedule-wraper').css('margin-left', '-100%');
 			});
-			$('.tab-site-content ul.list-schedule li span').on('touchend', function(event) {
+			$('.tab-site-content ul.list-schedule li span').on('tap', function(event) {
 				$('.tab-site-content ul.list-schedule li').removeClass('active');
 				$(this).addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
