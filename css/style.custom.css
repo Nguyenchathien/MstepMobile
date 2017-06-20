@@ -2266,6 +2266,15 @@ p.upload-error {
 	padding: 14px 0px 14px 80px;
 	position: relative;
 }
+.list-site-info .flag-date-site{
+	font-size: 40px;
+    margin-left: 30px;
+    color: #f74217;
+    padding: 5px 30px;
+    border-bottom: 1px solid #666;
+    margin-bottom: 20px;
+    display: inline-block;
+}
 .list-site-info li.active{
 	background-color: #dcf0fb;
 }
