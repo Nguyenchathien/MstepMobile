@@ -2267,6 +2267,7 @@ p.upload-error {
 	width: 100%;
 	background-color: #fff;
 	left: 200px;
+	top:  100%;
 	z-index: 9;
 	display: none;
 }
@@ -2275,6 +2276,7 @@ p.upload-error {
 	width: 100%;
 	background-color: #fff;
 	left: 200px;
+	top: 100%;
 	z-index: 9;
 	display: none;
 }
@@ -2296,7 +2298,19 @@ p.upload-error {
     display: inline-block;
 }
 .list-site-info li.active{
-	background-color: #dcf0fb;
+	/* background-color: #dcf0fb; */
+}
+.list-site-info li.active:after{
+	content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(55, 180, 249, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#schedule-wraper.active .list-site-info li.active:after{
+	width: 33.3333%;
 }
 .list-site-info li:before{
 	content: "\f0c8";

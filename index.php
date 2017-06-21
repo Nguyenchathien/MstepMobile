@@ -42,172 +42,70 @@
 									</div>
 									<div class="modal-body" data-type="schedule-site-date">
 										<div class="tab-date-content">
-											<ul class="list-site-info list-date" data-type="schedule-site-date-list">
-												<li class="date-add active"><span>6/1</span>
-													<ul class="list-site-info list-site">
-														<li><span>SPCテスト1</span>
-															<ul class="list-site-info list-schedule">
-																<li><span>Schedule 1</span></li>
-																<li><span>Schedule 2</span></li>
-																<li><span>Schedule 3</span></li>
-																<li><span>Schedule 4</span></li>
-																<li><span>Schedule 5</span></li>
-																<li><span>Schedule 6</span></li>
-																<li><span>Schedule 7</span></li>
-																<li><span>Schedule 8</span></li>
-																<li><span>Schedule 9</span></li>
-																<li><span>Schedule 10</span></li>
+											<ul class="list-site-info list-date">
+												<?php
+													$count_date = 1;
+													$count_site = 1;
+													$count_sche = 1;
+													for($i = 0; $i < 30; $i++){
+														?>
+														<li><span>6/<?= $count_date ?></span>
+															<ul class="list-site-info list-site">
+																<?php
+																for($j = 0; $j < 20; $j++){
+																	?>
+																	<li><span>site-<?= $count_site ?></span>
+																		<ul class="list-site-info list-schedule">
+																			<?php
+																			for($z = 0; $z < 20; $z++){
+																				?>
+																				<li><span>schedule-<?= $count_sche ?></span></li>
+																				<?php
+																				$count_sche++;
+																			}
+																			$count_sche = 1;
+																			?>
+																		</ul>
+																	</li>
+																	<?php
+																	$count_site++;
+																}
+																$count_site = 1;
+																?>
 															</ul>
 														</li>
-														<li><span>SPCテスト2</span></li>
-														<li><span>SPCテスト3</span></li>
-														<li><span>SPCテスト4</span></li>
-														<li><span>SPCテスト5</span></li>
-														<li><span>SPCテスト6</span></li>
-														<li><span>SPCテスト7</span></li>
-														<li><span>SPCテスト8</span></li>
-														<li><span>SPCテスト9</span></li>
-														<li><span>SPCテスト10</span>
-															<ul class="list-site-info list-schedule">
-																<li><span>Schedule 1</span></li>
-																<li><span>Schedule 2</span></li>
-																<li><span>Schedule 3</span></li>
-																<li><span>Schedule 4</span></li>
-																<li><span>Schedule 5</span></li>
-																<li><span>Schedule 6</span></li>
-																<li><span>Schedule 7</span></li>
-																<li><span>Schedule 8</span></li>
-																<li><span>Schedule 9</span></li>
-																<li><span>Schedule 10</span></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<li class="date-add"><span>6/2</span></li>
-												<li class="date-add"><span>6/3</span></li>
-												<li class="date-add"><span>6/4</span></li>
-												<li class="date-add"><span>6/5</span></li>
-												<li class="date-add"><span>6/6</span></li>
-												<li class="date-add"><span>6/7</span></li>
-												<li class="date-add"><span>6/8</span></li>
-												<li class="date-add"><span>6/9</span></li>
-												<li class="date-add"><span>6/10</span></li>
-												<li class="date-add"><span>6/11</span></li>
-												<li class="date-add"><span>6/12</span></li>
-												<li class="date-add"><span>6/13</span></li>
-												<li class="date-add"><span>6/14</span></li>
-												<li class="date-add"><span>6/15</span></li>
-												<li class="date-add"><span>6/16</span></li>
-												<li class="date-add"><span>6/17</span></li>
-												<li class="date-add"><span>6/18</span></li>
-												<li class="date-add"><span>6/19</span></li>
-												<li class="date-add"><span>6/20</span></li>
-												<li class="date-add"><span>6/21</span></li>
-												<li class="date-add"><span>6/22</span></li>
-												<li class="date-add"><span>6/23</span></li>
-												<li class="date-add"><span>6/24</span></li>
-												<li class="date-add"><span>6/25</span></li>
-												<li class="date-add"><span>6/26</span></li>
-												<li class="date-add"><span>6/27</span></li>
-												<li class="date-add"><span>6/28</span></li>
-												<li class="date-add"><span>6/29</span></li>
-												<li class="date-add"><span>6/30</span></li>
-												<li class="date-add"><span>7/1</span></li>
-												<li class="date-add"><span>7/2</span></li>
-												<li class="date-add"><span>7/3</span></li>
-												<li class="date-add"><span>7/4</span></li>
-												<li class="date-add"><span>7/5</span></li>
-												<li class="date-add"><span>7/6</span></li>
-												<li class="date-add"><span>7/7</span></li>
-												<li class="date-add"><span>7/8</span></li>
-												<li class="date-add"><span>7/9</span></li>
-												<li class="date-add"><span>7/10</span></li>
-												<li class="date-add"><span>7/11</span></li>
-												<li class="date-add"><span>7/12</span></li>
-												<li class="date-add"><span>7/13</span></li>
-												<li class="date-add"><span>7/14</span></li>
-												<li class="date-add"><span>7/15</span></li>
-												<li class="date-add"><span>7/16</span></li>
-												<li class="date-add"><span>7/17</span></li>
-												<li class="date-add"><span>7/18</span></li>
-												<li class="date-add"><span>7/19</span></li>
-												<li class="date-add"><span>7/20</span></li>
-												<li class="date-add"><span>7/21</span></li>
-												<li class="date-add"><span>7/22</span></li>
-												<li class="date-add"><span>7/23</span></li>
-												<li class="date-add"><span>7/24</span></li>
-												<li class="date-add"><span>7/25</span></li>
-												<li class="date-add"><span>7/26</span></li>
-												<li class="date-add"><span>7/27</span></li>
-												<li class="date-add"><span>7/28</span></li>
-												<li class="date-add"><span>7/29</span></li>
-												<li class="date-add"><span>7/30</span>
-													<ul class="list-site-info list-site">
-														<li><span>SPCテスト1</span>
-															<ul class="list-site-info list-schedule">
-																<li><span>Schedule 1</span></li>
-																<li><span>Schedule 2</span></li>
-																<li><span>Schedule 3</span></li>
-																<li><span>Schedule 4</span></li>
-																<li><span>Schedule 5</span></li>
-																<li><span>Schedule 6</span></li>
-																<li><span>Schedule 7</span></li>
-																<li><span>Schedule 8</span></li>
-																<li><span>Schedule 9</span></li>
-																<li><span>Schedule 10</span></li>
-															</ul>
-														</li>
-														<li><span>SPCテスト2</span></li>
-														<li><span>SPCテスト3</span></li>
-														<li><span>SPCテスト4</span></li>
-														<li><span>SPCテスト5</span></li>
-														<li><span>SPCテスト6</span></li>
-														<li><span>SPCテスト7</span></li>
-														<li><span>SPCテスト8</span></li>
-														<li><span>SPCテスト9</span></li>
-														<li><span>SPCテスト10</span></li>
-													</ul>
-												</li>
+														<?php
+														$count_date++;
+													}
+												?>
 											</ul>
 										</div>
+
 										<div class="tab-site-content" style="display: none">
 											<ul class="list-site-info list-site">
-												<li><span>SPCテスト1</span>
-													<ul class="list-site-info list-schedule">
-														<li><span>SPCテスト1 - Schedule 1</span></li>
-														<li><span>SPCテスト1 - Schedule 2</span></li>
-														<li><span>SPCテスト1 - Schedule 3</span></li>
-														<li><span>SPCテスト1 - Schedule 4</span></li>
-														<li><span>SPCテスト1 - Schedule 5</span></li>
-														<li><span>SPCテスト1 - Schedule 6</span></li>
-														<li><span>SPCテスト1 - Schedule 7</span></li>
-														<li><span>SPCテスト1 - Schedule 8</span></li>
-														<li><span>SPCテスト1 - Schedule 9</span></li>
-														<li><span>SPCテスト1 - Schedule 10</span></li>
-													</ul>
-												</li>
-												<li><span>SPCテスト2</span></li>
-												<li><span>SPCテスト3</span></li>
-												<li><span>SPCテスト4</span></li>
-												<li><span>SPCテスト5</span></li>
-												<li><span>SPCテスト6</span></li>
-												<li><span>SPCテスト7</span></li>
-												<li><span>SPCテスト8</span></li>
-												<li><span>SPCテスト9</span></li>
-												<li><span>SPCテスト10</span>
-													<ul class="list-site-info list-schedule">
-														<li><span>SPCテスト1 - Schedule 1</span></li>
-														<li><span>SPCテスト1 - Schedule 2</span></li>
-														<li><span>SPCテスト1 - Schedule 3</span></li>
-														<li><span>SPCテスト1 - Schedule 4</span></li>
-														<li><span>SPCテスト1 - Schedule 5</span></li>
-														<li><span>SPCテスト1 - Schedule 6</span></li>
-														<li><span>SPCテスト1 - Schedule 7</span></li>
-														<li><span>SPCテスト1 - Schedule 8</span></li>
-														<li><span>SPCテスト1 - Schedule 9</span></li>
-														<li><span>SPCテスト1 - Schedule 10</span></li>
-													</ul>
-												</li>
+												<?php
+												$count_site = 1;
+												$count_sche = 1;
+												for($j = 0; $j < 30; $j++){
+													?>
+													<li><span>site-<?= $count_site ?></span>
+														<ul class="list-site-info list-schedule">
+															<?php
+															for($z = 0; $z < 10; $z++){
+																?>
+																<li><span>schedule-<?= $count_sche ?></span></li>
+																<?php
+																$count_sche++;
+															}
+															$count_sche = 1;
+															?>
+														</ul>
+													</li>
+													<?php
+													$count_site++;
+												}
+												$count_site = 1;
+												?>
 											</ul>
 										</div>
 									</div>
@@ -471,9 +369,11 @@
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
+		var main_height = 0;
 		function setHeightList(){
 			var __height = $('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 20;
-			$('.list-date, .list-site').css('height', __height);
+			main_height = __height;
+			$('.list-date').css('height', __height);
 			$('.tab-site-content .list-site').css('height', __height);
 			$('#schedule-site-info-container').height($(window).height() - 100);
 		}
@@ -517,11 +417,39 @@
 		}
 		changeTabDateSite();
 
-		var scrollStep = 0;
-		var main_height = 0;
 		function scrollDateSite(){
 			// display submenu
-			$('.list-site-info li span').on('touchend', function(event) {
+			$('.tab-date-content .list-site-info li span').on('touchend', function(event) {
+				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
+				var subH = $(this).next().height();
+				var date_list_height = 0;
+				$('.tab-date-content .list-date > li').each(function(index, el) {
+					date_list_height += $(this).outerHeight();
+				});
+				if(date_list_height < (posY + subH + 70)){
+					var hTmp = parseInt(date_list_height) - parseInt(subH) - parseInt(posY);
+					$(this).next().css('top', hTmp + 'px');
+				}
+
+				$('#schedule-wraper').addClass('active');
+				$(this).closest('.list-site-info').find('ul').css('display', 'none');
+				$(this).closest('.list-site-info').find('li').removeClass('active');
+				$(this).parent().addClass('active');
+				$(this).next().css('display', 'block');
+			});
+
+			$('.tab-site-content .list-site-info li span').on('touchend', function(event) {
+				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
+				var subH = $(this).next().height();
+				var site_list_height = 0;
+				$('.tab-site-content .list-site > li').each(function(index, el) {
+					site_list_height += $(this).outerHeight();
+				});
+				if(site_list_height < (posY + subH + 70)){
+					var hTmp = parseInt(site_list_height) - parseInt(subH) - parseInt(posY);
+					$(this).next().css('top', hTmp + 'px');
+				}
+
 				$('#schedule-wraper').addClass('active');
 				$(this).closest('.list-site-info').find('ul').css('display', 'none');
 				$(this).closest('.list-site-info').find('li').removeClass('active');
