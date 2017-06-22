@@ -54,7 +54,7 @@
 																	<li><span>site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
-																			for($z = 0; $z < 15; $z++){
+																			for($z = 0; $z < 30; $z++){
 																				?>
 																				<li><span>schedule-<?= $z + 1 ?></span></li>
 																				<?php
@@ -418,7 +418,7 @@
 						var __top = parseInt(list_height) - parseInt(subH) - parseInt(posY);
 						if(Math.abs(__top) > posY){
 							__top = -posY;
-							$(this).next().height($(this).closest('.list-site-info').height());
+							$(this).closest('.list-site-info').height($(this).next().height());
 						}
 						$(this).next().css('top', __top + 'px');
 					}
