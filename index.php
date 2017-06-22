@@ -49,12 +49,12 @@
 														<li><span>6/<?= $i + 1 ?></span>
 															<ul class="list-site-info list-site">
 																<?php
-																for($j = 0; $j < 10; $j++){
+																for($j = 0; $j < 15; $j++){
 																	?>
 																	<li><span>site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
-																			for($z = 0; $z < 15; $z++){
+																			for($z = 0; $z < 10; $z++){
 																				?>
 																				<li><span>schedule-<?= $z + 1 ?></span></li>
 																				<?php
@@ -357,7 +357,7 @@
 	jQuery(document).ready(function($) {
 		var main_height = 0;
 		function setHeightList(){
-			var __height = $('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 20;
+			var __height = $('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 260;
 			main_height = $('#schedule-wraper').height() - $('#schedule-date-left .modal-header').height();
 			console.log(main_height);
 			$('.list-date').css('height', __height);
@@ -434,11 +434,12 @@
 					$(this).next().css('top', __top + 'px');
 					// if($(this).parent().position().top + (subH / 2) > main_height){
 					// 	__top = parseInt(main_height) - parseInt(subH) - parseInt(posY);
+					// 	console.log(__top);
 					// 	$(this).next().css('top', __top + 'px');
 					// }
 				}
 
-				$('#schedule-wraper').addClass('active');
+				$('#schedule-wraper').addClass('active').css('overflow', 'hidden');
 				$(this).closest('.list-site-info').find('ul').css('display', 'none');
 				$(this).closest('.list-site-info').find('li').removeClass('active');
 				$(this).parent().addClass('active');
@@ -469,24 +470,36 @@
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
-				$('#schedule-wraper').css('margin-left', '-100%');
+				$('#schedule-wraper').css({
+					'margin-left': '-100%',
+					'overflow': 'auto'
+				});
 			});
 			$('.tab-site-content ul.list-schedule li span').on('touchend', function(event) {
 				$('.tab-site-content ul.list-schedule li').removeClass('active');
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
-				$('#schedule-wraper').css('margin-left', '-100%');
+				$('#schedule-wraper').css({
+					'margin-left': '-100%',
+					'overflow': 'auto'
+				});
 			});
 		}
 		scrollDateSite();
 	});
 	$(document).on("pagecreate", "#pageone", function(){
 		$("#schedule-date-left").on("swipeleft", function(){
-			$('#schedule-wraper').addClass('active').css('margin-left', '-100%');
+			$('#schedule-wraper').addClass('active').css({
+				'margin-left': '-100%',
+				'overflow': 'auto'
+			});
 		});
 		$("#schedule-worker-right").on("swiperight", function(){
-			$('#schedule-wraper').addClass('active').css('margin-left', '0');
+			$('#schedule-wraper').addClass('active').css({
+				'margin-left': '0',
+				'overflow': 'hidden'
+			});
 		});
 		$('.tab-date-content').on("swiperight", function(){
 			if($('#schedule-wraper').hasClass('active')){
