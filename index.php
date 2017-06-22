@@ -49,12 +49,12 @@
 														<li><span>6/<?= $i + 1 ?></span>
 															<ul class="list-site-info list-site">
 																<?php
-																for($j = 0; $j < 20; $j++){
+																for($j = 0; $j < 10; $j++){
 																	?>
 																	<li><span>site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
-																			for($z = 0; $z < 5; $z++){
+																			for($z = 0; $z < 15; $z++){
 																				?>
 																				<li><span>schedule-<?= $z + 1 ?></span></li>
 																				<?php
@@ -408,15 +408,21 @@
 			$('.list-site-info li span').on('touchend', function(event) {
 				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
 				var subH = $(this).next().height();
-				var date_list_height = 0;
+				var list_height = 0;
 				$(this).closest('.list-site-info').children('li').each(function(index, el) {
-					date_list_height += $(this).outerHeight();
+					list_height += $(this).outerHeight();
 				});
-				if(date_list_height < (posY + subH + 70)){
-					pos_second = posY;
-					var hTmp = parseInt(date_list_height) - parseInt(subH) - parseInt(posY);
-					$(this).next().css('top', hTmp + 'px');
-				}
+				// if(subH < list_height){
+					if(list_height < (posY + subH + 70)){
+						pos_second = posY;
+						var __top = parseInt(list_height) - parseInt(subH) - parseInt(posY);
+						if(Math.abs(__top) > posY){
+							__top = -posY;
+							$(this).next().height($(this).closest('.list-site-info').height());
+						}
+						$(this).next().css('top', __top + 'px');
+					}
+				// }
 
 				$('#schedule-wraper').addClass('active');
 				$(this).closest('.list-site-info').find('ul').css('display', 'none');
