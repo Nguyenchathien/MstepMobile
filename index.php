@@ -49,7 +49,7 @@
 														<li><span>6/<?= $i + 1 ?></span>
 															<ul class="list-site-info list-site">
 																<?php
-																for($j = 0; $j < 10; $j++){
+																for($j = 0; $j < 20; $j++){
 																	?>
 																	<li><span>site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
@@ -405,7 +405,7 @@
 
 		function scrollDateSite(){
 			// display submenu
-			$('.tab-date-content .list-site-info li span').on('touchend', function(event) {
+			$('.list-site-info li span').on('touchend', function(event) {
 				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
 				var subH = $(this).next().height();
 				var date_list_height = 0;
@@ -425,24 +425,24 @@
 				$(this).next().css('display', 'block');
 			});
 
-			$('.tab-site-content .list-site-info li span').on('touchend', function(event) {
-				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
-				var subH = $(this).next().height();
-				var site_list_height = 0;
-				$('.tab-site-content .list-site > li').each(function(index, el) {
-					site_list_height += $(this).outerHeight();
-				});
-				if(site_list_height < (posY + subH + 70)){
-					var hTmp = parseInt(site_list_height) - parseInt(subH) - parseInt(posY);
-					$(this).next().css('top', hTmp + 'px');
-				}
+			// $('.tab-site-content .list-site-info li span').on('touchend', function(event) {
+			// 	var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
+			// 	var subH = $(this).next().height();
+			// 	var site_list_height = 0;
+			// 	$('.tab-site-content .list-site > li').each(function(index, el) {
+			// 		site_list_height += $(this).outerHeight();
+			// 	});
+			// 	if(site_list_height < (posY + subH + 70)){
+			// 		var hTmp = parseInt(site_list_height) - parseInt(subH) - parseInt(posY);
+			// 		$(this).next().css('top', hTmp + 'px');
+			// 	}
 
-				$('#schedule-wraper').addClass('active');
-				$(this).closest('.list-site-info').find('ul').css('display', 'none');
-				$(this).closest('.list-site-info').find('li').removeClass('active');
-				$(this).parent().addClass('active');
-				$(this).next().css('display', 'block');
-			});
+			// 	$('#schedule-wraper').addClass('active');
+			// 	$(this).closest('.list-site-info').find('ul').css('display', 'none');
+			// 	$(this).closest('.list-site-info').find('li').removeClass('active');
+			// 	$(this).parent().addClass('active');
+			// 	$(this).next().css('display', 'block');
+			// });
 
 			$('.tab-date-content ul.list-schedule li span').on('touchend', function(event) {
 				$('.tab-date-content ul.list-schedule li').removeClass('active');
