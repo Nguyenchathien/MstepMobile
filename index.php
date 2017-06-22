@@ -44,38 +44,30 @@
 										<div class="tab-date-content">
 											<ul class="list-site-info list-date">
 												<?php
-													$count_date = 1;
-													$count_site = 1;
-													$count_sche = 1;
 													for($i = 0; $i < 30; $i++){
 														?>
-														<li><span>6/<?= $count_date ?></span>
+														<li><span>6/<?= $i + 1 ?></span>
 															<ul class="list-site-info list-site">
 																<?php
 																for($j = 0; $j < 10; $j++){
 																	?>
-																	<li><span>[6/<?= $count_date ?>]-site<?= $count_site ?></span>
+																	<li><span>site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
 																			for($z = 0; $z < 10; $z++){
 																				?>
-																				<li><span>schedule-<?= $count_sche ?></span></li>
+																				<li><span>schedule-<?= $z + 1 ?></span></li>
 																				<?php
-																				$count_sche++;
 																			}
-																			$count_sche = 1;
 																			?>
 																		</ul>
 																	</li>
 																	<?php
-																	$count_site++;
 																}
-																$count_site = 1;
 																?>
 															</ul>
 														</li>
 														<?php
-														$count_date++;
 													}
 												?>
 											</ul>
@@ -84,27 +76,21 @@
 										<div class="tab-site-content" style="display: none">
 											<ul class="list-site-info list-site">
 												<?php
-												$count_site = 1;
-												$count_sche = 1;
 												for($j = 0; $j < 30; $j++){
 													?>
-													<li><span>site-<?= $count_site ?></span>
+													<li><span>site-<?= $j + 1 ?></span>
 														<ul class="list-site-info list-schedule">
 															<?php
 															for($z = 0; $z < 10; $z++){
 																?>
-																<li><span>schedule-<?= $count_sche ?></span></li>
+																<li><span>schedule-<?= $z + 1 ?></span></li>
 																<?php
-																$count_sche++;
 															}
-															$count_sche = 1;
 															?>
 														</ul>
 													</li>
 													<?php
-													$count_site++;
 												}
-												$count_site = 1;
 												?>
 											</ul>
 										</div>
