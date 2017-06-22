@@ -2267,7 +2267,7 @@ p.upload-error {
 	width: 100%;
 	background-color: #fff;
 	left: 200px;
-	top:  100%;
+	top:  0px;
 	z-index: 9;
 	display: none;
 }

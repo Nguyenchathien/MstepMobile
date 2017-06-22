@@ -2131,7 +2131,7 @@ body.mobi-layout div.ui-checkbox{
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;  
+    display: flex;
 }
 body.mobi-layout span.form-control{
     display: none!important;

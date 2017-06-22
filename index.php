@@ -52,12 +52,12 @@
 														<li><span>6/<?= $count_date ?></span>
 															<ul class="list-site-info list-site">
 																<?php
-																for($j = 0; $j < 20; $j++){
+																for($j = 0; $j < 10; $j++){
 																	?>
-																	<li><span>site-<?= $count_site ?></span>
+																	<li><span>[6/<?= $count_date ?>]-site<?= $count_site ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
-																			for($z = 0; $z < 20; $z++){
+																			for($z = 0; $z < 10; $z++){
 																				?>
 																				<li><span>schedule-<?= $count_sche ?></span></li>
 																				<?php
