@@ -358,7 +358,8 @@
 		var main_height = 0;
 		function setHeightList(){
 			var __height = $('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 20;
-			main_height = __height;
+			main_height = $('#schedule-wraper').height() - $('#schedule-date-left .modal-header').height();
+			console.log(main_height);
 			$('.list-date').css('height', __height);
 			$('.tab-site-content .list-site').css('height', __height);
 			$('#schedule-site-info-container').height($(window).height() - 100);
@@ -405,24 +406,37 @@
 
 		function scrollDateSite(){
 			// display submenu
+			var __top = 0;
 			$('.list-site-info li span').on('touchend', function(event) {
 				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
 				var subH = $(this).next().height();
 				var list_height = 0;
+
 				$(this).closest('.list-site-info').children('li').each(function(index, el) {
 					list_height += $(this).outerHeight();
 				});
-				// if(subH < list_height){
-					if(list_height < (posY + subH + 70)){
-						pos_second = posY;
-						var __top = parseInt(list_height) - parseInt(subH) - parseInt(posY);
-						if(Math.abs(__top) > posY){
-							__top = -posY;
-							$(this).next().height($(this).closest('.list-site-info').height());
-						}
-						$(this).next().css('top', __top + 'px');
+				if(list_height < (posY + (subH / 2) + 70)){
+					pos_second = posY;
+					__top = parseInt(list_height) - parseInt(subH) - parseInt(posY);
+					if(Math.abs(__top) > posY){
+						__top = -posY;
+						$(this).next().height($(this).closest('.list-site-info').height());
 					}
-				// }
+					$(this).next().css('top', __top + 'px');
+				}
+				else if(list_height >= (posY + (subH/2) + 70)){
+					if(posY > parseInt(subH / 2)){
+						__top = -parseInt(subH / 2);
+					}
+					else{
+						__top = -posY;
+					}
+					$(this).next().css('top', __top + 'px');
+					// if($(this).parent().position().top + (subH / 2) > main_height){
+					// 	__top = parseInt(main_height) - parseInt(subH) - parseInt(posY);
+					// 	$(this).next().css('top', __top + 'px');
+					// }
+				}
 
 				$('#schedule-wraper').addClass('active');
 				$(this).closest('.list-site-info').find('ul').css('display', 'none');
