@@ -54,7 +54,7 @@
 																	<li><span>site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
-																			for($z = 0; $z < 10; $z++){
+																			for($z = 0; $z < 5; $z++){
 																				?>
 																				<li><span>schedule-<?= $z + 1 ?></span></li>
 																				<?php
@@ -409,10 +409,11 @@
 				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
 				var subH = $(this).next().height();
 				var date_list_height = 0;
-				$('.tab-date-content .list-date > li').each(function(index, el) {
+				$(this).closest('.list-site-info').children('li').each(function(index, el) {
 					date_list_height += $(this).outerHeight();
 				});
 				if(date_list_height < (posY + subH + 70)){
+					pos_second = posY;
 					var hTmp = parseInt(date_list_height) - parseInt(subH) - parseInt(posY);
 					$(this).next().css('top', hTmp + 'px');
 				}
