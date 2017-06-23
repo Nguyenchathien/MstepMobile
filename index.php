@@ -371,7 +371,7 @@
 
 		var openMe = false;
 		function toggleMenu(){
-			$('.menu-toggle-site').on('touchend', function(event) {
+			$('.menu-toggle-site').on('vclick', function(event) {
 				switch(openMe){
 					case false:
 						$('#schedule-date-left').css('left', '0');
@@ -389,7 +389,7 @@
 		toggleMenu();
 
 		function changeTabDateSite(){
-			$('.tab-date-site').find('span').on('touchend', function(event) {
+			$('.tab-date-site').find('span').on('vclick', function(event) {
 				var __tab = $(this).attr('data-tab');
 				switch(__tab){
 					case "tab-date":
@@ -410,7 +410,7 @@
 		function scrollDateSite(){
 			// display submenu
 			var __top = 0;
-			$('.list-site-info li span').on('touchend', function(event) {
+			$('.list-site-info li span').on('vclick', function(event) {
 				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
 				var subH = $(this).next().height();
 				var list_height = 0;
@@ -449,7 +449,7 @@
 				$(this).next().css('display', 'block');
 			});
 
-			// $('.tab-site-content .list-site-info li span').on('touchend', function(event) {
+			// $('.tab-site-content .list-site-info li span').on('vclick', function(event) {
 			// 	var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
 			// 	var subH = $(this).next().height();
 			// 	var site_list_height = 0;
@@ -468,7 +468,7 @@
 			// 	$(this).next().css('display', 'block');
 			// });
 
-			$('.tab-date-content ul.list-schedule li span').on('touchend', function(event) {
+			$('.tab-date-content ul.list-schedule li span').on('vclick', function(event) {
 				$('.tab-date-content ul.list-schedule li').removeClass('active');
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
@@ -478,7 +478,7 @@
 					'overflow': 'auto'
 				});
 			});
-			$('.tab-site-content ul.list-schedule li span').on('touchend', function(event) {
+			$('.tab-site-content ul.list-schedule li span').on('vclick', function(event) {
 				$('.tab-site-content ul.list-schedule li').removeClass('active');
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
