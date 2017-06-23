@@ -2270,6 +2270,7 @@ p.upload-error {
 	top:  0px;
 	z-index: 9;
 	display: none;
+	padding-top: 15px;
 }
 .tab-site-content .list-site-info.list-schedule{
 	position: absolute;

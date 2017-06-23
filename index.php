@@ -49,11 +49,13 @@
 														<li><span>6/<?= $i + 1 ?></span>
 															<ul class="list-site-info list-site">
 																<?php
+																echo 'date-' . ($i+1);
 																for($j = 0; $j < 15; $j++){
 																	?>
 																	<li><span>site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
+																			echo 'site-' . ($j+1);
 																			for($z = 0; $z < 50; $z++){
 																				?>
 																				<li><span>schedule-<?= $z + 1 ?></span></li>
@@ -81,6 +83,7 @@
 													<li><span>site-<?= $j + 1 ?></span>
 														<ul class="list-site-info list-schedule">
 															<?php
+															echo 'site-' . ($j+1);
 															for($z = 0; $z < 10; $z++){
 																?>
 																<li><span>schedule-<?= $z + 1 ?></span></li>
