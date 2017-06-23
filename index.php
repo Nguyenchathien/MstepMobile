@@ -357,7 +357,7 @@
 	jQuery(document).ready(function($) {
 		var main_height = 0;
 		function setHeightList(){
-			var __height = $(window).height()-400;//$('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 400;
+			var __height = $(window).height()-300;//$('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 400;
 			var lisDate = ($('.list-site-info .list-site').height() > $('.list-date').height())?$('.list-date').height():'auto';
 
 			$('.list-date').css('height', __height);
