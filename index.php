@@ -54,7 +54,7 @@
 																	<li><span>site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
-																			for($z = 0; $z < 10; $z++){
+																			for($z = 0; $z < 50; $z++){
 																				?>
 																				<li><span>schedule-<?= $z + 1 ?></span></li>
 																				<?php
@@ -358,8 +358,6 @@
 		var main_height = 0;
 		function setHeightList(){
 			var __height = $('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 260;
-			main_height = $('#schedule-wraper').height() - $('#schedule-date-left .modal-header').height();
-			console.log(main_height);
 			$('.list-date').css('height', __height);
 			$('.tab-site-content .list-site').css('height', __height);
 			$('#schedule-site-info-container').height($(window).height() - 100);

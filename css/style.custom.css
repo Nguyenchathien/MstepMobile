@@ -2319,6 +2319,9 @@ p.upload-error {
 	margin-right: 15px;
 	vertical-align: middle;
 }
+.list-site-info li.active:before{
+	content: "\f054";
+}
 .tab-date-content{
 	transition: .2s;
 	width: 300%;
