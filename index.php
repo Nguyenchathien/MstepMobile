@@ -368,6 +368,9 @@
 			$('#schedule-site-info-container').height($(window).height() - 100);
 		}
 		setHeightList();
+		$(window).resize(function(event) {
+			setHeightList();
+		});
 
 		var openMe = false;
 		function toggleMenu(){
