@@ -49,16 +49,14 @@
 														<li><span>6/<?= $i + 1 ?></span>
 															<ul class="list-site-info list-site">
 																<?php
-																echo 'date-' . ($i+1);
-																for($j = 0; $j < 15; $j++){
+																for($j = 0; $j < 35; $j++){
 																	?>
-																	<li><span>site-<?= $j + 1 ?></span>
+																	<li><span>d<?=$i?>-site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
-																			echo 'site-' . ($j+1);
 																			for($z = 0; $z < 50; $z++){
 																				?>
-																				<li><span>schedule-<?= $z + 1 ?></span></li>
+																				<li><span>s<?= $j + 1 ?>-schedule-<?= $z + 1 ?></span></li>
 																				<?php
 																			}
 																			?>
@@ -83,7 +81,6 @@
 													<li><span>site-<?= $j + 1 ?></span>
 														<ul class="list-site-info list-schedule">
 															<?php
-															echo 'site-' . ($j+1);
 															for($z = 0; $z < 10; $z++){
 																?>
 																<li><span>schedule-<?= $z + 1 ?></span></li>
@@ -360,9 +357,14 @@
 	jQuery(document).ready(function($) {
 		var main_height = 0;
 		function setHeightList(){
-			var __height = $('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 400;
+			var __height = $(window).height()-400;//$('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 400;
+			var lisDate = $('.list-date').height();
+
 			$('.list-date').css('height', __height);
+			$('.list-date').css('overflow', 'auto');
 			$('.tab-site-content .list-site').css('height', __height);
+			$('.list-site-info .list-site').css('height',lisDate );
+			$('.list-site-info .list-site').css('overflow', 'auto');
 			$('#schedule-site-info-container').height($(window).height() - 100);
 		}
 		setHeightList();
