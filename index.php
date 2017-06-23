@@ -359,6 +359,7 @@
 		function setHeightList(){
 			var __height = $('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 600;
 			$('.list-date').css('height', __height);
+			$('.list-site, .list-schedule').css('max-height', __height);
 			$('.tab-site-content .list-site').css('height', __height);
 			$('#schedule-site-info-container').height($(window).height() - 100);
 		}
