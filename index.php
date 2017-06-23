@@ -49,12 +49,12 @@
 														<li><span>6/<?= $i + 1 ?></span>
 															<ul class="list-site-info list-site">
 																<?php
-																for($j = 0; $j < 35; $j++){
+																for($j = 0; $j < 15; $j++){
 																	?>
-																	<li><span>d<?=$i?>-site-<?= $j + 1 ?></span>
+																	<li><span>d<?=$i+1?>-site-<?= $j + 1 ?></span>
 																		<ul class="list-site-info list-schedule">
 																			<?php
-																			for($z = 0; $z < 50; $z++){
+																			for($z = 0; $z < 10; $z++){
 																				?>
 																				<li><span>s<?= $j + 1 ?>-schedule-<?= $z + 1 ?></span></li>
 																				<?php
@@ -358,7 +358,7 @@
 		var main_height = 0;
 		function setHeightList(){
 			var __height = $(window).height()-400;//$('#schedule-worker-right').height() - $('.modal-header').outerHeight() - 400;
-			var lisDate = $('.list-date').height();
+			var lisDate = ($('.list-site-info .list-site').height() > $('.list-date').height())?$('.list-date').height():'auto';
 
 			$('.list-date').css('height', __height);
 			$('.list-date').css('overflow', 'auto');
