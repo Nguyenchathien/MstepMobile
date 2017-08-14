@@ -2257,7 +2257,7 @@ p.upload-error {
 	overflow: auto;
 	list-style: none;
 	padding-left: 0;
-	width: 33.3333%;
+	width: 100%;
 	float: left;
 	overflow-y: auto;
     overflow-x: hidden!important;
@@ -2266,7 +2266,7 @@ p.upload-error {
 	position: absolute;
 	width: 100%;
 	background-color: #fff;
-	left: 200px;
+	left: 33.3333%;
 	top:  0px;
 	z-index: 9;
 	display: none;
@@ -2276,7 +2276,7 @@ p.upload-error {
 	position: absolute;
 	width: 100%;
 	background-color: #fff;
-	left: 200px;
+	left: 33.3333%;
 	top: 100%;
 	z-index: 9;
 	display: none;
@@ -2299,16 +2299,22 @@ p.upload-error {
     display: inline-block;
 }
 .list-site-info li.active{
-	/* background-color: #dcf0fb; */
+	/*z-index: 10;*/
+}
+.list-site-info li span{
+	z-index: 11;
+	position: absolute;
 }
 .list-site-info li.active:after{
 	content: '';
     height: 100%;
     width: 100%;
     background-color: rgba(55, 180, 249, 0.2);
+    /*background-color: #dcf0fb;*/
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 #schedule-wraper.active .list-site-info li.active:after{
 	width: 33.3333%;
@@ -2325,7 +2331,7 @@ p.upload-error {
 }
 .tab-date-content{
 	transition: .2s;
-	width: 300%;
+	width: 100%;
 }
 .tab-site-content{
 	transition: .5s;
@@ -2376,15 +2382,13 @@ p.upload-error {
 	position: relative;
 }
 #list-level li.active:before{
-	content: '\f00c';
+    content: '\f00c';
     font-family: FontAwesome;
     color: green;
     position: absolute;
-    bottom: -4px;
+    left: 0px;
     right: 0px;
-}
-	font-size: 15px;
-	margin-top: -5px;
+    font-size: 30px;
 }
 .row-option-content .opt-content{
 	width: 300px;

@@ -36,8 +36,8 @@
 									<div class="modal-header" data-type="schedule-site-info">
 										<h4 class="modal-title">Hien（&nbsp;）に情報を追加する</h4>
 										<div class="tab-date-site">
-											<span data-tab="tab-date" class="active">Date</span>
-											<span data-tab="tab-site">Site</span>
+											<span data-tab="tab-date" class="active">日程</span>
+											<span data-tab="tab-site">現場</span>
 										</div>
 									</div>
 									<div class="modal-body" data-type="schedule-site-date">
@@ -311,7 +311,7 @@
 														<li data-type="schedule-bg-color" style="background-color:#b99e80;" data-color="#b99e80" data-color-id="19"></li>
 														<li data-type="schedule-bg-color" style="background-color:#a8a8a8;" data-color="#a8a8a8" data-color-id="20"></li>
 														<li data-type="schedule-bg-color" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204);" data-color="#ffffff" data-color-id="21">
-															<span data-type="schedule-bg-color-white" style="font-size: 10px; line-height: 2; transform: scale(0.5);">なし</span>
+															<span data-type="schedule-bg-color-white" style="font-size: 15px; line-height: 3; transform: scale(0.5);">なし</span>
 														</li>
 														<input type="hidden" name="color_id" value="3">
 													</ul>
@@ -374,7 +374,7 @@
 
 		var openMe = false;
 		function toggleMenu(){
-			$('.menu-toggle-site').on('vclick', function(event) {
+			$('.menu-toggle-site').on('click', function(event) {
 				switch(openMe){
 					case false:
 						$('#schedule-date-left').css('left', '0');
@@ -392,7 +392,7 @@
 		toggleMenu();
 
 		function changeTabDateSite(){
-			$('.tab-date-site').find('span').on('vclick', function(event) {
+			$('.tab-date-site').find('span').on('click', function(event) {
 				var __tab = $(this).attr('data-tab');
 				switch(__tab){
 					case "tab-date":
@@ -413,7 +413,7 @@
 		function scrollDateSite(){
 			// display submenu
 			var __top = 0;
-			$('.list-site-info li span').on('vclick', function(event) {
+			$('.list-site-info li span').on('click', function(event) {
 				var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
 				var subH = $(this).next().height();
 				var list_height = 0;
@@ -452,7 +452,7 @@
 				$(this).next().css('display', 'block');
 			});
 
-			// $('.tab-site-content .list-site-info li span').on('vclick', function(event) {
+			// $('.tab-site-content .list-site-info li span').on('click', function(event) {
 			// 	var posY = $(this).parent().position().top + $(this).closest('.list-site-info').scrollTop();
 			// 	var subH = $(this).next().height();
 			// 	var site_list_height = 0;
@@ -471,7 +471,8 @@
 			// 	$(this).next().css('display', 'block');
 			// });
 
-			$('.tab-date-content ul.list-schedule li span').on('vclick', function(event) {
+			$(document).on("click", ".tab-date-content ul.list-schedule li span", function(event) {
+
 				$('.tab-date-content ul.list-schedule li').removeClass('active');
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
@@ -480,10 +481,11 @@
 					'margin-left': '-100%',
 					'overflow': 'auto'
 				});
+				event.preventDefault();
 			});
-			$('.tab-site-content ul.list-schedule li span').on('vclick', function(event) {
+
+			$('.tab-site-content ul.list-schedule li span').on('click', function(event) {
 				$('.tab-site-content ul.list-schedule li').removeClass('active');
-				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
 				$('#schedule-wraper').css({
