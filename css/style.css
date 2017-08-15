@@ -1477,9 +1477,11 @@ ul.list-worker li {
 }
 #schedule-worker-right .modal-body .modal-left-block .worker-block .check_all_mem {
     padding-bottom: 5px;
+    margin-left: 10px;
 }
 .checkbox.check_all_struck {
     margin-top: 25px;
+    margin-left: 10px;
 }
 #schedule-worker-right div.modal-body div.modal-left-block div.struck-block .checkbox.check_all_struck label {
     width: 100% !important;
