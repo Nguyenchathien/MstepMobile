@@ -1704,7 +1704,7 @@ ul#list-car li {
 }
 body.mobi-layout #schedule-wraper{
 	width: 100%;
-	transition: .5s;
+	transition: 1s;
 }
 body.mobi-layout #schedule-wraper .ui-loader-default{
     display: none;
@@ -1720,7 +1720,6 @@ body.mobi-layout #schedule-wraper #schedule-date-left{
     position: fixed;
     width:250px;
     background: #fff;
-    transition: .5s;
     max-height: calc(100% - 102px)!important;
 }
 body.mobi-layout #schedule-worker-right {
@@ -1736,22 +1735,13 @@ body.mobi-layout #schedule-wraper #pageone{
     top: 0px;
     bottom: 0px;
 }
-.transition {
-  -webkit-transition: 3s;
-  -moz-transition: 3s;
-  -ms-transition: 3s;
-  -o-transition: 3s;
-  transition: 3s;
-}
 body.mobi-layout #schedule-wraper.active #schedule-date-left{
     width: calc(100% - 200px);
-    transition: .5s;
 }
 body.mobi-layout #schedule-wraper.active #schedule-worker-right{
     width: 100%;
     display: none;
     overflow: auto;
-    transition: .5s;
 }
 #schedule-worker-right button.close{
     position:absolute;

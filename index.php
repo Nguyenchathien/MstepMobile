@@ -453,19 +453,19 @@
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
-				$('#schedule-worker-right').css('display','block');
-				$('#schedule-date-left').css('display','none');
+
+				$('#schedule-worker-right').fadeIn();
+				$('#schedule-date-left').fadeOut();
 			});
 
-			// $('.tab-site-content ul.list-schedule li span').on('click', function(event) {
 			$(document).on("click", ".tab-site-content ul.list-schedule li span", function(event) {
 
 				$('.tab-site-content ul.list-schedule li').removeClass('active');
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
-				$('#schedule-worker-right').css('display','block');
-				$('#schedule-date-left').css('display','none');
+				$('#schedule-worker-right').fadeIn();
+				$('#schedule-date-left').fadeOut();
 			});
 		}
 		scrollDateSite();
@@ -473,19 +473,21 @@
 	$(document).on("pagecreate", "#pageone", function(){
 		$("#schedule-date-left").on("swipeleft", function(){
 
-			$('#schedule-worker-right').css('display','block');
-			$('#schedule-date-left').css({'display':'none','transition':'3s'});
+			$('#schedule-worker-right').fadeIn();
+			$('#schedule-date-left').fadeOut();
 			$('#schedule-wraper').addClass('active').css({
 				'margin-left': '0',
+				'transition': '1s',
 				'overflow': 'auto'
 			});
 		});
 		$("#schedule-worker-right").on("swiperight", function(){
 
-			$('#schedule-worker-right').css('display','none');
-			$('#schedule-date-left').css({'display':'block','transition':'3s'});
+			$('#schedule-worker-right').fadeOut();
+			$('#schedule-date-left').fadeIn();
 			$('#schedule-wraper').addClass('active').css({
 				'margin-left': '0',
+				'transition': '1s',
 				'overflow': 'hidden'
 			});
 		});
