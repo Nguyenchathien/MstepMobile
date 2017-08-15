@@ -1434,12 +1434,13 @@ div[data-type=schedule-popbox] {
     margin: 2px 0;
 }
 #schedule-site-info-container div.modal-body input{
-    margin-right: 10px;
+    margin-right: 5px;
 }
 body.mobi-layout #schedule-site-info-container div.modal-body input{
     width: 30px;
     height: 30px;
-    transform: scale(1.5);
+    transform: scale(1.0);
+    margin-top: 5px;
 }
 body.mobi-layout .registed-workers-block input{
     width: 30px;
@@ -1470,7 +1471,7 @@ ul.list-worker li {
     list-style: none;
     display: -webkit-inline-box;
     float: left;
-    margin-right: 10px;
+    margin-right: 20px;
     margin-bottom: 5px;
     padding: 2px 0px 0px 30px;
     position: relative;
