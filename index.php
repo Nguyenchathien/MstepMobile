@@ -484,8 +484,11 @@
 				event.preventDefault();
 			});
 
-			$('.tab-site-content ul.list-schedule li span').on('click', function(event) {
+			// $('.tab-site-content ul.list-schedule li span').on('click', function(event) {
+			$(document).on("click", ".tab-site-content ul.list-schedule li span", function(event) {
+
 				$('.tab-site-content ul.list-schedule li').removeClass('active');
+				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
 				$('#schedule-wraper').css({
