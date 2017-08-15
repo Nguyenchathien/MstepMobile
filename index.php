@@ -463,8 +463,8 @@
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
-				$('#schedule-worker-right').fadeIn();
-				$('#schedule-date-left').fadeOut();
+				$('#schedule-worker-right').addClass('openwk');
+				$('#schedule-date-left').addClass('closewk');
 			});
 		}
 		scrollDateSite();
