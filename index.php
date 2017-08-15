@@ -453,9 +453,8 @@
 				$(this).parent().addClass('active');
 				$('.menu-toggle-site').removeClass('open-toggle');
 				openMe = false;
-
-				$('#schedule-worker-right').fadeIn();
-				$('#schedule-date-left').fadeOut();
+				$('#schedule-worker-right').addClass('openwk');
+				$('#schedule-date-left').addClass('closewk');
 			});
 
 			$(document).on("click", ".tab-site-content ul.list-schedule li span", function(event) {
@@ -473,8 +472,8 @@
 	$(document).on("pagecreate", "#pageone", function(){
 		$("#schedule-date-left").on("swipeleft", function(){
 
-			$('#schedule-worker-right').fadeIn();
-			$('#schedule-date-left').fadeOut();
+			$('#schedule-worker-right').removeClass('openwk');
+			$('#schedule-date-left').removeClass('closewk');
 			$('#schedule-wraper').addClass('active').css({
 				'margin-left': '0',
 				'transition': '1s',
@@ -483,8 +482,8 @@
 		});
 		$("#schedule-worker-right").on("swiperight", function(){
 
-			$('#schedule-worker-right').fadeOut();
-			$('#schedule-date-left').fadeIn();
+			$('#schedule-worker-right').removeClass('openwk');
+			$('#schedule-date-left').removeClass('closewk');
 			$('#schedule-wraper').addClass('active').css({
 				'margin-left': '0',
 				'transition': '1s',
