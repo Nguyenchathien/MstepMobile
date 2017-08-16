@@ -1434,13 +1434,14 @@ div[data-type=schedule-popbox] {
     margin: 2px 0;
 }
 #schedule-site-info-container div.modal-body input{
-    margin-right: 5px;
+    margin-right: 8px;
+}
+#schedule-worker-right .checkbox label, .radio label {
+    padding-left: 5px;
 }
 body.mobi-layout #schedule-site-info-container div.modal-body input{
-    width: 30px;
-    height: 30px;
-    transform: scale(1.0);
-    margin-top: 5px;
+    transform: scale(2.3);
+    margin-top: 16px;
 }
 body.mobi-layout .registed-workers-block input{
     width: 30px;
@@ -2125,6 +2126,7 @@ body.mobi-layout #schedule-wraper.active #schedule-worker-right.openwk{
     color: #444;
     padding: 6px 10px;
     font-size: large;
+    margin-right: 5px;
 }
 #loading {
 
@@ -2171,7 +2173,7 @@ body.mobi-layout ul.list-worker,
 body.mobi-layout ul.list-truck{height:120px!important;-webkit-overflow-scrolling: touch;}
 body.mobi-layout ul.list-worker li{padding-left:0}
 body.mobi-layout ul.list-worker li input[type="checkbox"],
-body.mobi-layout ul.list-truck li input[type="checkbox"]{width:30px;height:30px;position:inherit;margin-right:25px}
+body.mobi-layout ul.list-truck li input[type="checkbox"]{position:inherit;margin-right:25px}
 body.mobi-layout #schedule-worker-right div.modal-body label input[type="checkbox"]{width:30px;height:30px;margin-right:25px;position:inherit;}
 body.mobi-layout #schedule-site-modal-inner{width:calc(100% - 200px)}
 body.mobi-layout #schedule-site-modal-inner div.modal-header h4{font-size:35px}
