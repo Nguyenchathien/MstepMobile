@@ -1442,6 +1442,7 @@ div[data-type=schedule-popbox] {
 body.mobi-layout #schedule-site-info-container div.modal-body input{
     transform: scale(2.3);
     margin-top: 16px;
+    left: 10px;
 }
 body.mobi-layout .registed-workers-block input{
     width: 30px;
