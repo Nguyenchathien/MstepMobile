@@ -1437,7 +1437,7 @@ div[data-type=schedule-popbox] {
     margin-right: 8px;
 }
 #schedule-worker-right .checkbox label, .radio label {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 body.mobi-layout #schedule-site-info-container div.modal-body input{
     transform: scale(2.3);
@@ -1996,6 +1996,10 @@ body.mobi-layout #schedule-wraper.active #schedule-worker-right{
     display:block;
 }
 body.mobi-layout #schedule-wraper.active #schedule-worker-right.openwk{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     margin-right: 0;
     transition: .3s ease;
 }

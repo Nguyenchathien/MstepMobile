@@ -6,12 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style.custom.css">
 	<link rel="stylesheet" type="text/css" href="css/sites.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body class="mobi-layout">
 	<div class="wrapper">
@@ -351,6 +349,7 @@
 	</div>
 </body>
 
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		var main_height = 0;
@@ -488,23 +487,23 @@
 				'overflow': 'hidden'
 			});
 		});
-		$('.tab-date-content').on("swiperight", function(){
-			if($('#schedule-wraper').hasClass('active')){
-				switch(true){
-					case $('.list-site-info').width() >= Math.abs(parseInt($('.tab-date-content').css('margin-left'))):
-						$('.tab-date-content').css('margin-left', '0');
-						break;
-					case $('.list-site-info').width() < Math.abs(parseInt($('.tab-date-content').css('margin-left'))):
-						$('.tab-date-content').css('margin-left', '-100%');
-						break;
-				}
-			}
-		});
-		$('.tab-site-content').on("swiperight", function(){
-			if($('#schedule-wraper').hasClass('active')){
-				$('.tab-site-content').css('margin-left', '0');
-			}
-		});
+		// $('.tab-date-content').on("swiperight", function(){
+		// 	if($('#schedule-wraper').hasClass('active')){
+		// 		switch(true){
+		// 			case $('.list-site-info').width() >= Math.abs(parseInt($('.tab-date-content').css('margin-left'))):
+		// 				$('.tab-date-content').css('margin-left', '0');
+		// 				break;
+		// 			case $('.list-site-info').width() < Math.abs(parseInt($('.tab-date-content').css('margin-left'))):
+		// 				$('.tab-date-content').css('margin-left', '-100%');
+		// 				break;
+		// 		}
+		// 	}
+		// });
+		// $('.tab-site-content').on("swiperight", function(){
+		// 	if($('#schedule-wraper').hasClass('active')){
+		// 		$('.tab-site-content').css('margin-left', '0');
+		// 	}
+		// });
 	});
 </script>
 
