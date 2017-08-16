@@ -1591,7 +1591,8 @@ ul#list-car::-webkit-scrollbar-thumb {
 }
 ul#list-car li {
     float: left;
-    margin-right: 20px
+    margin-right: 20px;
+    margin-left: 10px;
 }
 .worker-table {
     width: 100%;
@@ -1983,20 +1984,20 @@ button#worker-close {
 }
 body.mobi-layout #schedule-wraper.active #schedule-date-left{
     margin-left: 0px;
-    transition: .5s ease;
+    transition: .3s ease;
 }
 body.mobi-layout #schedule-wraper.active #schedule-date-left.closewk{
     margin-left: -100%;
-    transition: .5s ease;
+    transition: .3s ease;
 }
 body.mobi-layout #schedule-wraper.active #schedule-worker-right{
     margin-right: -100%;
-    transition: .5s ease;
+    transition: .3s ease;
     display:block;
 }
 body.mobi-layout #schedule-wraper.active #schedule-worker-right.openwk{
     margin-right: 0;
-    transition: .5s ease;
+    transition: .3s ease;
 }
 @media only screen  and (max-width:991px) {
     .l-contents #left-block div#set-up {
@@ -2161,7 +2162,7 @@ body.mobi-layout div.ui-checkbox{
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 body.mobi-layout span.form-control{
     display: none!important;
@@ -2173,10 +2174,10 @@ body.mobi-layout #schedule-worker-right div.modal-body div.modal-right-block div
 body.mobi-layout #schedule-worker-right div.modal-footer button.btn{font-size:35px;padding:20px 40px;}
 body.mobi-layout ul.list-worker,
 body.mobi-layout ul.list-truck{height:120px!important;-webkit-overflow-scrolling: touch;}
-body.mobi-layout ul.list-worker li{padding-left:0}
+body.mobi-layout ul.list-worker li{padding-left:10px}
 body.mobi-layout ul.list-worker li input[type="checkbox"],
 body.mobi-layout ul.list-truck li input[type="checkbox"]{position:inherit;margin-right:25px}
-body.mobi-layout #schedule-worker-right div.modal-body label input[type="checkbox"]{width:30px;height:30px;margin-right:25px;position:inherit;}
+body.mobi-layout #schedule-worker-right div.modal-body label input[type="checkbox"]{margin-right:25px;position:inherit;}
 body.mobi-layout #schedule-site-modal-inner{width:calc(100% - 200px)}
 body.mobi-layout #schedule-site-modal-inner div.modal-header h4{font-size:35px}
 body.mobi-layout #schedule-site-modal-inner div.modal-body form label,
