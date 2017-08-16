@@ -474,7 +474,7 @@
 			$('#schedule-date-left').removeClass('closewk');
 			$('#schedule-wraper').addClass('active').css({
 				'margin-left': '0',
-				'transition': '.5s',
+				'transition': '.2s ease',
 				'overflow': 'auto'
 			});
 		});
@@ -484,7 +484,7 @@
 			$('#schedule-date-left').removeClass('closewk');
 			$('#schedule-wraper').addClass('active').css({
 				'margin-left': '0',
-				'transition': '.5s',
+				'transition': '.2s ease',
 				'overflow': 'hidden'
 			});
 		});

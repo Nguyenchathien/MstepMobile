@@ -1983,20 +1983,20 @@ button#worker-close {
 }
 body.mobi-layout #schedule-wraper.active #schedule-date-left{
     margin-left: 0px;
-    transition: .5s ease;
+    transition: .2s ease;
 }
 body.mobi-layout #schedule-wraper.active #schedule-date-left.closewk{
     margin-left: -100%;
-    transition: .5s ease;
+    transition: .2s ease;
 }
 body.mobi-layout #schedule-wraper.active #schedule-worker-right{
     margin-right: -100%;
-    transition: .5s ease;
+    transition: .2s ease;
     display:block;
 }
 body.mobi-layout #schedule-wraper.active #schedule-worker-right.openwk{
     margin-right: 0;
-    transition: .5s ease;
+    transition: .2s ease;
 }
 @media only screen  and (max-width:991px) {
     .l-contents #left-block div#set-up {
@@ -2161,6 +2161,7 @@ body.mobi-layout div.ui-checkbox{
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
+    margin-right: 5px;
 }
 body.mobi-layout span.form-control{
     display: none!important;
